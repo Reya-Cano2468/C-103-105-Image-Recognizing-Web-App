@@ -1,0 +1,71 @@
+<html>
+
+<head>
+  <title>Image recognition</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=KoHo:wght@200&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+
+    <center>
+      <h1>Image Recognition</h1>
+      <br><br>
+
+      <p style="font-size: 22px;" id="p1">This model is trained to identify the following objects: </p>
+      <br>
+      <hr>
+      <h4> A Bottle<i class="fas fa-wine-bottle"></i></h4>
+      <hr>
+      <h4>Hogwarts Stamp<i class="fas fa-stamp" aria-hidden="true"></i></h4>
+      <hr>
+      <h4>A Toy Horse<i class="fas fa-horse" aria-hidden="true"></i></h4>
+      <hr>
+      <h4> Tape <i class="fa fa-tape" aria-hidden="true"></i></h4>
+      <hr>
+      <h4> Book <i class="fa fa-book" aria-hidden="true"></i></h4>
+      <hr>
+      <label>Webcam View - </label>
+
+      <br><br>
+      <div id="camera"> </div>
+      <br><br><br>
+      <label>Screenshot - </label>
+      <div id="result"> </div>
+
+      <br><br>
+
+      <br><br>
+      <button class="btn btn-info" onclick="take_snapshot()"> Capture Image</button>
+      <br>
+      <br>
+      <br>
+      <button class="btn btn-success" onclick="check()"> Identify Image </button>
+      <br><br>
+
+      <p style="font-size: 22px;">Object : <span id="object_name"></span></p>
+      <p style="font-size: 22px;">Accuracy :<span id="accuracy"></span></p>
+
+    </center>
+
+  </div>
+  <script src="main.js"></script>
+
+</body>
+
+</html>
